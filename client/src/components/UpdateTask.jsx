@@ -26,7 +26,7 @@ const UpdateTask = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:4000/api/edit/${id}`, { title, description });
+            await axios.put(`https://to-do-list-backend-0jko.onrender.com/api/edit/${id}`, { title, description });
             setMessage("Task updated successfully! redirecting to Home");
             setError("");
             navigate("/");
