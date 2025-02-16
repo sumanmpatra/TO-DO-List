@@ -11,7 +11,7 @@ const TaskDetails = () => {
 
     useEffect(() => {
         setTimeout(() => {
-            axios.get(`http://localhost:4000/api/tasks/${id}`)
+            axios.get(`https://to-do-list-backend-0jko.onrender.com/api/tasks/${id}`)
             .then(response => {
                 setTask(response.data);
                 setLoading(false);
