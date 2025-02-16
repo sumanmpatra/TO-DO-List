@@ -6,13 +6,13 @@ const taskRoutes = require('./Routes/taskRoutes')
 
 const app = express()
 
-const BACKEND_URL = process.env.BACKEND_URL || 4000
+const PORT = process.env.PORT || 4000
 app.use(cors())
 app.use(express.json());
 
 connectDB()
 app.use('/api', taskRoutes)
 
-app.listen(BACKEND_URL, () => {
-    console.log(`Server is listening on BACKEND_URL ${BACKEND_URL}`)
+app.listen(PORT, () => {
+    console.log(`Server is listening on PORT ${PORT}`)
 })
