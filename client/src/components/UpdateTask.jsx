@@ -13,7 +13,7 @@ const UpdateTask = () => {
     useEffect(() => {
         const fetchTask = async () => {
             try {
-                const response = await axios.get(`http://localhost:4000/api/tasks/${id}`);
+                const response = await axios.get(`https://to-do-list-backend-0jko.onrender.com/api/tasks/${id}`);
                 setTitle(response.data.title);
                 setDescription(response.data.description);
             } catch (error) {
